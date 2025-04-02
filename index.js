@@ -10,6 +10,10 @@ app.set("views", path.join(__dirname,"views"));
 app.use(express.static(path.join(__dirname, 'images')));
 app.use(express.static(path.join(__dirname,"public")));
 
+
+app.get("/", (req, res) => {
+    res.redirect("/home");
+});
 app.get("/home", (req,res)=>{
     res.render("home.ejs");
 })
