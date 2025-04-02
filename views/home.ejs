@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/home.css">
+    
+</head>
+<body>
+    <header>
+        <a></a>
+        <span class="material-symbols-outlined menu-icon" id="menu-icon">menu</span>
+        <nav id="nav">
+            <button onclick="window.location.href='/home/team';">Team</button>
+            <button onclick="window.location.href='/home/audition';">Auditions</button>
+            <button onclick="window.location.href='/home/meet';">Meets</button>
+            <button onclick="window.location.href='/home/workshop';">Workshops</button>
+            <button onclick="window.location.href='/home/session';">Sessions</button>
+            <button onclick="window.location.href='/home/projects';">Projects</button>
+            <button onclick="window.location.href='/home/event';">Events</button>
+        </nav>
+    </header>
+
+    <main>
+        <h1>SAMARPAN - THE TECHNOPHILIA</h1>
+        <p>We are the official club of JC Bose University; it's a community of tech enthusiasts who love experimenting, building, and shaping the future with technology. From artificial intelligence to robotics, from software development to automation, this club is a hub for those who dream of pushing technological boundaries.</p>
+        
+        <div class="content-section left" id="ideate">
+            <h3>> Ideate</h3>
+            <p>Every innovation starts with an idea. Ideation is the first step in the creative process where problems are analyzed and solutions are brainstormed. Members of the club come together to brainstorm ideas that can solve real world problems using technology.</p>
+        </div>
+        
+        <div class="content-section right" id="innovate">
+            <h3>> Innovate</h3>
+            <p>Innovation is creativity in action. Once an idea is formed, the next step is to refine and develop it into something practical and impactful. Innovation is about improving existing solutions or creating something entirely new - it's the prototyping step.</p>
+        </div>
+        
+        <div class="content-section left" id="create">
+            <h3>> Create</h3>
+            <p>Creativity leads to creation. The final step is to bring the idea to life by developing a working product, model, or software. This is where all the brainstorming and innovation turn into something tangible.</p>
+        </div>
+    </main>
+
+    <footer>
+        <h2>Contact Us-</h2>
+        <div class="contact-container">
+            <div class="social-links">
+                <h3>Get In Touch</h3>
+                <a href="https://www.instagram.com/samarpan__the__technophilia/">
+                    Official Instagram
+                </a>
+                <a href="https://www.linkedin.com/company/samarpan-the-technophilia/?fbclid=PAZXh0bgNhZW0CMTEAAabBAg0yQ2ozUf5tgbxrbR7lcVWoFwnhXD4nFJSjg4YxVjmGgE2BYzXMbrU_aem_Lb0Jbmo2679-Rmx4JcDuOA">
+                    LinkedIn Profile
+                </a>
+            </div>
+            
+            <div class="vertical-line"></div>
+            
+            <div class="contact-form">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 SAMARPAN - THE TECHNOPHILIA. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>        
+        const menuIcon = document.getElementById('menu-icon');
+        const navbar = document.getElementById('nav');
+
+        function checkScreenSize() {
+            if (window.innerWidth <= 768) {
+                menuIcon.style.display = 'block';
+                navbar.style.display = 'none';
+            } else {
+                menuIcon.style.display = 'none';
+                navbar.style.display = 'flex';
+                navbar.classList.remove('nav-visible');
+            }
+        }
+
+        
+        checkScreenSize();
+        
+       
+        menuIcon.addEventListener('click', (e) => {
+            e.stopPropagation();
+            navbar.style.display = 'flex';
+            navbar.classList.toggle('nav-visible');
+        });
+        
+        
+        document.addEventListener('click', (e) => {
+            if (!navbar.contains(e.target) && e.target !== menuIcon) {
+                navbar.classList.remove('nav-visible');
+            }
+        });
+
+
+        window.addEventListener('resize', checkScreenSize);
+
+        const sections = document.querySelectorAll('.content-section');
+        
+        const checkVisibility = () => {
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (sectionTop < windowHeight * 0.75) {
+                    section.classList.add('visible');
+                }
+            });
+        };
+
+
+        window.addEventListener('load', checkVisibility);
+        window.addEventListener('scroll', checkVisibility);
+    </script>
+</body>
+</html>

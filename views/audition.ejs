@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Club Auditions</title>
+    <link rel="stylesheet" href="/audition.css">
+    
+</head>
+<body>
+    <h1>CLUB AUDITION</h1>
+    <p>Club auditions help us find passionate members who fit our culture. Through different rounds, we test skills, creativity, and teamwork. Selected members get to learn, grow, and contribute to exciting projects.</p>
+    
+    <div class="section-container left" onclick="window.location.href='/home/audition/2k25'">
+        <h2>>Audition 2k25</h2>
+        <br>
+        Round 1 :- Aptitude Test
+        <br>
+        Round 2 :- Presentation
+        <br>
+        Round 3 :- Personal Interview
+        <br>
+        <a href="/home/audition/2k25">Know More...</a>
+    </div>
+
+    <div class="section-container right" onclick="window.location.href='/home/audition/2k24'">
+        <h2>>Audition 2k24</h2>
+        <br>
+        Round 1 :- Test 
+        <br>
+        Round 2 :- Project Showcase
+        <br>
+        Round 3 :- Personal Interview
+        <br>
+        <a href="/home/audition/2k24">Know More...</a>
+    </div>
+
+    <div class="section-container left" onclick="window.location.href='/home/audition/2k23'">
+        <h2>>Audition 2k23</h2>
+        <br>
+        Round 1 :- Written Test
+        <br>
+        Round 2 :- Project Round
+        <br>
+        Round 3 :- Personal Interview
+        <br>
+        <a href="/home/audition/2k23">Know More...</a>
+    </div>
+
+    <div class="section-container right" onclick="window.location.href='/home/audition/2k22'">
+        <h2>>Audition 2k22</h2>
+        <br>
+        Round 1 :- Aptitude Test
+        <br>
+        Round 2 :- Idea/Project Presentation
+        <br>
+        Round 3 :- Personal Interview
+        <br>
+        <a href="/home/audition/2k22">Know More...</a>
+    </div>
+    
+    <script>
+        // Scroll animation functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.section-container');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+            
+            // Prevent nested link clicks from triggering container click
+            document.querySelectorAll('.section-container a').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                });
+            });
+        });
+    </script>
+</body>
+</html>

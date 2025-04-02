@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/audi.css">
+</head>
+<body>
+    <img src="" alt="Samarpan Photo 1">
+        <img src="" alt="Samarpan Photo 2">
+    <div class="rounds-container">
+    <div class="round">
+        <h2>Round 1</h2>
+        <p>This is first step to become part of Samarpan The Technophilia 
+        This round occurs after the signup process. In this round, participants were given a 2-day slot where they had to visit the venue according to their scheduled day they selected and take a basic aptitude test. Based on these test results, they would qualify for further rounds.</p>
+        <button onclick="toggleSection('r1')">More Details..</button>
+        <div id="r1" class="details">
+            <p>Conducted On</p>
+            <p>Date - 10 to 11 Feb</p>
+            <p>Time - 4 to 6 PM</p>
+            <p>Venue - G7 and F6 Electrical Department</p>
+            <a href="https://www.instagram.com/p/CotKF02Pn1C/?img_index=1" target="_blank">Qualified Participants</a>
+        </div>
+    </div>
+
+    <div class="round">
+        <h2>Round 2</h2>
+        <p>This round was for students who cleared the 1st round. Participants were required to prepare and deliver a presentation. The process involved: first, questions about their presentation topic would be asked, followed by the actual presentation by the student.</p>
+        <button onclick="toggleSection('r2')">More Details..</button>
+        <div id="r2" class="details">
+            <p>Conducted On</p>
+            <p>Date - 16th to 18th Feb</p>
+            <p>Time - 4 to 6 PM</p>
+            <p>Venue - G7 and F6 Electrical Department</p>
+            <a href="https://www.instagram.com/p/CpFeryiP9-y/?img_index=1" target="_blank">Qualified Participants</a>
+        </div>
+    </div>
+
+    <div class="round round-3">
+        <h2>Round 3</h2>
+        <p>This is final step to become part of Samarpan The Technophilia 
+        This is the personal interview round where we don't evaluate the student's knowledge, but rather assess their passion, goals, and personality.</p>
+        <button onclick="toggleSection('r3')">More Details..</button>
+        <div id="r3" class="details">
+            <p>Scheduled for</p>
+            <p>Date - 27th to 28th Feb</p>
+            <p>Time - 3:30 to 5:30 PM</p>
+            <p>Venue - S1 and S7 Electrical Department</p>
+            <a href="https://www.instagram.com/p/CpZ4XfHvYy-/?img_index=1" target="_blank">Selected Participants</a>
+        </div>
+    </div>
+</div>
+
+    <script>
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.classList.toggle('show');
+        }
+    </script>
+
+
+</body>
+</html>

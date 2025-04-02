@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEMBERS</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/team.css">
+</head>
+<body>
+    <h1>MEMBERS OF CLUB</h1>
+    <p><b>There are mutltiple roles in a club and each role is equally important for success of club</b></p>
+    <div>
+        <div class="section-container left">
+            <div class="sec">
+                <p>
+                    <h3>SECRETARYS</h3>
+                    Secratarys are main administrative head of the club.<br>
+                    They manage official documentation, communication, and oversee overall club operations.<br>
+                    They ensure meetings, events, and club activities run smoothly.<br>
+                    There are  5 secratarys of our club
+                </p>
+                <button onclick="window.location.href='/home/team/sec';">Secratary Details...</button>
+            </div>
+        </div>
+
+
+        <div class="section-container right">
+            <div class="mentor">
+                <p>
+                    <h3>MENTORS</h3>
+                        Mentors are experienced members who guide and support junior members.<br>
+                        They provide advice, training, and help in skill development related to club activities.<br>
+                        There are 2 mentors in our club
+
+                </p>
+                <button onclick="window.location.href='/home/team/mentor';">Mentor Details...</button>
+       
+            </div>
+        </div>
+
+
+
+
+        <div class="section-container left">
+            <div class="jec">
+                <p>
+                    <h3>JOINT SECRETARYS</h3>
+                    Joint secratary assists the Secretary in administrative tasks.<br>
+                    They help in coordinating club activities and step in when the Secretary is unavailable.<br>
+                    There are 4 jsec of our club
+                </p>
+                <button onclick="window.location.href='/home/team/jsec';">JSec Details...</button>
+        
+            </div>
+        </div>
+
+
+
+
+    <div class="section-container right">
+
+        <div class="ih">
+            <p>
+                <h3>INNOVATIVE HEADS</h3>
+                Innovative heads are responsible for bringing new ideas, creative solutions, and unique
+                event concepts to keep the club dynamic and engaging.<br>
+                They focus on brainstorming and implementing innovations.<br>
+                Since there are teams we have multiple heads for them
+
+            </p>
+            <button onclick="window.location.href='/home/team/ih';">Heads Details...</button>
+        
+        </div>
+    </div>
+
+
+
+    <div class="section-container left">
+
+
+        <div class="sc">
+        <p>
+            <h3>SENIOR COORDINATOR</h3>
+            Senior coordinator manages specific teams or events, ensuring smooth execution.<br>
+            They delegate tasks, maintain team coordination, and assist in the overall functioning of the club.<br>
+        </p>
+        <button onclick="window.location.href='/home/team/sc';">Coordinators Details...</button>
+    </div>
+</div>
+</div>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.section-container');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+

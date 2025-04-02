@@ -1,0 +1,192 @@
+/* Basic Reset */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+  /* Main Styles */
+  body {
+
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #f5f7fa 0, #c3cfe2 100%);
+    padding: 20px;
+    line-height: 1.6;
+    color: #333;
+
+  }
+  
+  h1 {
+    text-align: center;
+    margin: 20px 0;
+    color: #2c3e50;
+    font-size: 2.2rem;
+  }
+  
+  /* Center the intro paragraph */
+  p{
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;    
+    word-spacing: 5px;      
+    letter-spacing: 0.1px;
+  }
+  
+  .imt, .hpt {
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color: white;
+    padding: 20px;
+    margin-top: 10vh;
+    margin-right: 20vw;
+    text-align: left;
+    border-left: 3px solid #3498db;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gtg {
+  box-sizing: border-box;
+    border-radius: 8px;
+    background-color: white;
+    padding: 20px;
+    margin-top: 10vh;
+    margin-left: 30vw;
+    text-align: left;
+    border-right: 3px solid #3498db;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Headings - ENHANCED */
+h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    position: relative;
+    padding-left: 15px;
+}
+
+h2::before {
+    content: '>';
+    position: absolute;
+    left: 0;
+    color: #3498db;
+}
+  
+  /* Image Slider */
+  .image-slider {
+    margin: 15px 0;
+    position: relative;
+    max-width: 800px;
+    overflow: hidden;
+  }
+  
+  .slider-container {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .slider-image {
+    min-width: 100%;
+  }
+  
+  .slider-image img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+  }
+  
+  .slider-nav {
+    position: absolute;
+    top: 50%;
+    width: (100%-20px);
+    /* left:50px;
+    gap:450px; */
+    left:4vw;
+    gap:30vw;
+    display: flex;
+    margin-left:50px;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 10px;
+  }
+  
+  .slider-btn {
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .slider-dots {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #bbb;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .dot.active {
+    background: #3498db;
+  }
+  
+/* Toggle Button - ENHANCED */
+.toggle-btn {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background: #2980b9;
+  transform: translateY(-2px);
+}
+
+/* Collapsible Content - COMPATIBLE */
+.collapsible-content {
+  display: none;
+  margin-top: 15px;
+}
+
+.collapsible-content.show {
+  display: block;
+}
+
+/* Responsive - COMPATIBLE */
+@media (max-width: 768px) {
+  .imt, .gtg, .hpt {
+      width: 100%;
+      margin: 30px 0 !important;
+      border-left: none !important;
+      border-right: none !important;
+  }
+  
+  .slider-image img {
+      max-height: 250px;
+  }
+}
+
+.imt:hover , .hpt:hover , .gtg:hover{
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+    transform: translateY(-5px);
+}

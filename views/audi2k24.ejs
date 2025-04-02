@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samarpan Auditions</title>
+    <link rel="stylesheet" href="/audi.css">
+</head>
+<body>
+    <div class="photo-row">
+        <img src="/audi/2k24/p1.jpg" alt="Samarpan Photo 1">
+        <img src="/audi/2k24/p2.jpg" alt="Samarpan Photo 2">
+    </div>
+    
+    <div class="rounds-container">
+        <div class="round">
+            <h2>Round 1</h2>
+            <p>This is first step to become part of Samarpan The Technophilia. 
+            This round will be basic test to analyze one's IQ and reasoning. 
+            On basis of this round's result participant will be allowed for further rounds.</p>
+            <button onclick="toggleSection('r1')">More Details..</button>
+            <div id="r1" class="details">
+                <p><strong>Conducted On:</strong></p>
+                <p>Date  - 15th to 16thFeb</p>
+                <p>Time  - 4 to 5 PM</p>
+                <p>Venue - S1 and S7 Electrical Department</p>
+                <a href="https://www.instagram.com/p/Cd1duNNBAOG/?img_index=1" target="_blank">Qualified Participants</a>
+            </div>
+        </div>
+
+        <div class="round">
+            <h2>Round 2</h2>
+            <p>This round was for students who cleared the 1st round. Participants were required to prepare and deliver a presentation. The process involved: first, questions about their presentation topic would be asked, followed by the actual presentation by the student.</p>
+            <button onclick="toggleSection('r2')">More Details..</button>
+            <div id="r2" class="details">
+                <p><strong>Conducted On:</strong></p>
+                <p>Date  - 16th to 18th March</p>
+                <p>Time  - 4 to 6 PM</p>
+                <p>Venue - G7 and F6 Electrical Department</p>
+                <a href="https://www.instagram.com/p/C4TdoxnvdFq/?img_index=1" target="_blank">Qualified Participants</a>
+            </div>
+        </div>
+
+        <div class="round">
+            <h2>>Buffer Round</h2>
+            <p>This was an extra round offering a second opportunity to students who missed signing up for Round 1. It had two interview panels that scheduled students in specific slots and shortlisted them straight for Round 3 based on their confidence and skills.</p>
+            <button onclick="toggleSection('br')">More Details..</button>
+            <div id="br" class="details">
+                <p><strong>Conducted On:</strong></p>
+                <p>Date  - 29th Feb</p>
+                </p>Time  - 4 to 5 PM</p>
+                </p>Venue - Google Meet</p>
+                
+                <a href="https://www.instagram.com/p/C39y-mrPVqn/?img_index=1" target="_blank">Qualified Participants</a>
+            </div>
+        </div>
+
+        <div class="round">
+            <h2>Round 3</h2>
+            <p>This is final step to become part of Samarpan The Technophilia 
+               This is the personal interview round where we don't evaluate the student's knowledge, but rather assess their passion, goals, and personality.</p>
+            <button onclick="toggleSection('r3')">More Details..</button>
+            <div id="r3" class="details">
+                <p><strong>Scheduled for:</strong></p>
+                <p>Date  - 1st and 2nd April</p>
+                <p>Time  - 3:30 to 5:30 PM</p>
+                <p>Venue - S1 and S7 Electrical Department</p>
+                <a href="https://www.instagram.com/p/C3vWjoqvqWt/?img_index=1" target="_blank">Selected Participants</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.classList.toggle('show');
+        }
+    </script>
+
+</body>
+</html>
